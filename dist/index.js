@@ -1,0 +1,58 @@
+/**
+ * Glass — official Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ */
+
+const TOKENS = {
+  '--bg-base': 'rgba(8, 10, 16, 0.18)',
+  '--bg-surface': 'rgba(14, 16, 24, 0.28)',
+  '--bg-elevated': 'rgba(20, 24, 34, 0.36)',
+  '--bg-inset': 'rgba(6, 8, 12, 0.22)',
+  '--bg-hover': 'rgba(186, 230, 253, 0.08)',
+  '--bg-active': 'rgba(186, 230, 253, 0.14)',
+  '--text-primary': '#e8f4ff',
+  '--text-secondary': 'rgba(232, 244, 255, 0.74)',
+  '--text-muted': 'rgba(232, 244, 255, 0.5)',
+  '--text-faint': 'rgba(232, 244, 255, 0.32)',
+  '--border': 'rgba(186, 230, 253, 0.16)',
+  '--border-subtle': 'rgba(186, 230, 253, 0.08)',
+  '--border-strong': 'rgba(186, 230, 253, 0.28)',
+  '--accent': '#7dd3fc',
+  '--accent-hover': '#bae6fd',
+  '--accent-muted': 'rgba(125, 211, 252, 0.22)',
+  '--accent-subtle': 'rgba(125, 211, 252, 0.12)',
+  '--glass-bg': 'rgba(14, 18, 28, 0.42)',
+  '--glass-border': 'rgba(186, 230, 253, 0.16)',
+  '--glass-bg-menu': 'rgba(16, 22, 34, 0.78)',
+  '--glass-border-menu': 'rgba(186, 230, 253, 0.14)',
+  '--status-active': '#7dd3fc',
+  '--status-on-hold': '#fbbf24',
+  '--status-completed': '#86efac',
+  '--status-dropped': '#fb7185',
+};
+
+module.exports = {
+  id: 'theme-glass',
+  name: 'Glass',
+  version: '0.1.0',
+  description: 'Ice. The desktop shows through.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-glass',
+      name: 'Glass',
+      description: 'Ice. The desktop shows through.',
+      author: 'Dripnex',
+      colorScheme: 'dark',
+      frosted: true,
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};

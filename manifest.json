@@ -1,0 +1,7 @@
+{
+  "id": "theme-glass",
+  "name": "Glass",
+  "version": "0.1.0",
+  "description": "Ice. The desktop shows through.",
+  "main": "dist/index.js"
+}
