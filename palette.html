@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glass — palette</title>
+  <style>
+    :root {
+    --bg-base: rgba(8, 10, 16, 0.18);
+    --bg-surface: rgba(14, 16, 24, 0.28);
+    --bg-elevated: rgba(20, 24, 34, 0.36);
+    --bg-inset: rgba(6, 8, 12, 0.22);
+    --bg-hover: rgba(186, 230, 253, 0.08);
+    --bg-active: rgba(186, 230, 253, 0.14);
+    --text-primary: #e8f4ff;
+    --text-secondary: rgba(232, 244, 255, 0.74);
+    --text-muted: rgba(232, 244, 255, 0.5);
+    --text-faint: rgba(232, 244, 255, 0.32);
+    --border: rgba(186, 230, 253, 0.16);
+    --border-subtle: rgba(186, 230, 253, 0.08);
+    --border-strong: rgba(186, 230, 253, 0.28);
+    --accent: #7dd3fc;
+    --accent-hover: #bae6fd;
+    --accent-muted: rgba(125, 211, 252, 0.22);
+    --accent-subtle: rgba(125, 211, 252, 0.12);
+    --glass-bg: rgba(14, 18, 28, 0.42);
+    --glass-border: rgba(186, 230, 253, 0.16);
+    --glass-bg-menu: rgba(16, 22, 34, 0.78);
+    --glass-border-menu: rgba(186, 230, 253, 0.14);
+    --status-active: #7dd3fc;
+    --status-on-hold: #fbbf24;
+    --status-completed: #86efac;
+    --status-dropped: #fb7185;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      margin: 0 0 8px;
+    }
+    .mood {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin: 0 0 32px;
+      max-width: 40rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .swatch {
+      height: 92px;
+      border-bottom: 1px solid var(--border);
+    }
+    .meta { padding: 12px 14px 14px; }
+    .label { font-weight: 650; font-size: 0.95rem; }
+    .token, .hex, .purpose {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-top: 4px;
+    }
+    .hex, .token {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Glass</h1>
+    <p class="mood">Ice. The desktop shows through.</p>
+    <div class="grid">
+    <article class="chip">
+      <div class="swatch" style="background: var(--bg-base)"></div>
+      <div class="meta">
+        <div class="label">Base</div>
+        <div class="token">--bg-base</div>
+        <div class="hex">#080a10 · rgba(8, 10, 16, 0.18)</div>
+        <div class="purpose">Window background</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--bg-surface)"></div>
+      <div class="meta">
+        <div class="label">Surface</div>
+        <div class="token">--bg-surface</div>
+        <div class="hex">#0e1018 · rgba(14, 16, 24, 0.28)</div>
+        <div class="purpose">Sidebar and titlebar</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--bg-elevated)"></div>
+      <div class="meta">
+        <div class="label">Elevated</div>
+        <div class="token">--bg-elevated</div>
+        <div class="hex">#141822 · rgba(20, 24, 34, 0.36)</div>
+        <div class="purpose">Raised panels</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--text-primary)"></div>
+      <div class="meta">
+        <div class="label">Text</div>
+        <div class="token">--text-primary</div>
+        <div class="hex">#e8f4ff</div>
+        <div class="purpose">Headings and body</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--text-muted)"></div>
+      <div class="meta">
+        <div class="label">Muted</div>
+        <div class="token">--text-muted</div>
+        <div class="hex">#e8f4ff · rgba(232, 244, 255, 0.5)</div>
+        <div class="purpose">Secondary copy</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--accent)"></div>
+      <div class="meta">
+        <div class="label">Accent</div>
+        <div class="token">--accent</div>
+        <div class="hex">#7dd3fc</div>
+        <div class="purpose">Selection, links, marks</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--status-active)"></div>
+      <div class="meta">
+        <div class="label">Active</div>
+        <div class="token">--status-active</div>
+        <div class="hex">#7dd3fc</div>
+        <div class="purpose">Active status</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--status-on-hold)"></div>
+      <div class="meta">
+        <div class="label">On hold</div>
+        <div class="token">--status-on-hold</div>
+        <div class="hex">#fbbf24</div>
+        <div class="purpose">On-hold status</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--status-completed)"></div>
+      <div class="meta">
+        <div class="label">Completed</div>
+        <div class="token">--status-completed</div>
+        <div class="hex">#86efac</div>
+        <div class="purpose">Completed status</div>
+      </div>
+    </article>
+    <article class="chip">
+      <div class="swatch" style="background: var(--status-dropped)"></div>
+      <div class="meta">
+        <div class="label">Dropped</div>
+        <div class="token">--status-dropped</div>
+        <div class="hex">#fb7185</div>
+        <div class="purpose">Dropped status</div>
+      </div>
+    </article>
+    </div>
+  </main>
+</body>
+</html>
