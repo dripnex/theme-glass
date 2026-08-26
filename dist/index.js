@@ -35,7 +35,7 @@ const TOKENS = {
 module.exports = {
   id: 'theme-glass',
   name: 'Glass',
-  version: '0.1.0',
+  version: '0.1.1',
   description: 'Ice. The desktop shows through.',
 
   activate(context) {
